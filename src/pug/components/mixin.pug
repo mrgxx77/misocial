@@ -10,7 +10,7 @@ doctype html
 
 mixin menu(mainMenu, colorTheme="light")
     .navigation.flex-between.items-center.gap(class=colorTheme)
-        .logo 
+        .logo
             a(href="index.html")
                 img(src="../img/SymbolMixin.png", alt="")
                 span MISOCIAL    
@@ -77,7 +77,7 @@ mixin menu(mainMenu, colorTheme="light")
     }
 
 mixin card(oneCard)
-    .card.flex-between.items-center
+    .card
         figure 
             figcaption 
                 img(src=oneCard.img, alt=oneCard.alt)
@@ -92,4 +92,4 @@ mixin card(oneCard)
                 ul.description
                     for item in oneCard.description 
                         li #{item}
-                a(href=oneCard.hrefBtn)  oneCard.btn 
+                a(href=oneCard.hrefBtn)  #{oneCard.btn}

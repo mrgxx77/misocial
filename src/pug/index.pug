@@ -22,9 +22,10 @@ html(lang="en")
             h2 Select a Plan
             p Lorem ipsum dolor sit amet, consectetur adipisicing
             p elit, sed do eiusmod tempor incididunt ut.
-            +card(cardInfo.satelite)
-            +card(cardInfo.mars)
-            +card(cardInfo.rocket)
+            .cards.flex-between.items-center
+                +card(cardInfo.satelite)
+                +card(cardInfo.mars)
+                +card(cardInfo.rocket)
         .control 
             p.span SOCAL MARKETING and ANALYTICS
             h2 Take control of your data
