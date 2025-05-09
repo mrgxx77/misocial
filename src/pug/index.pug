@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet")
+    body
+        include components/mixin
+        header
+            +menu(mainMenu)
+            .pricing
+                p.span SOCIAL MARKETING and ANALYTICS
+                h1 Pricing Table
+                p Lorem ipsum dolor sit amet, consectetur adipisicing
+                p elit, sed do eiusmod tempor incididunt ut.
+        .plan
+            p.span Misocial
+            h2 Select a Plan
+            p Lorem ipsum dolor sit amet, consectetur adipisicing
+            p elit, sed do eiusmod tempor incididunt ut.
+            +card(cardInfo.satelite)
+            +card(cardInfo.mars)
+            +card(cardInfo.rocket)
+        .control 
+            p.span SOCAL MARKETING and ANALYTICS
+            h2 Take control of your data
+            a get started
+            a explore features 
+        footer
+            +menu(mainMenu, 'dark')
+            hr
+            p © 2017 Mass Impressions and Tranmautritam. Make the right impression.
