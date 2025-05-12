@@ -55,10 +55,15 @@ li
 .light
   a, span
     color: #ffffff
+  .a
+    +btn($fixed: false)
 
 .dark 
   a, span
-    color: black 
+    color: #756edc
+  .a
+    +btn($fixed: false, $empty: true)
+
 
 .pricing 
   h1
@@ -85,10 +90,17 @@ li
   p
     padding-top: 50px
     color: #ffffff
-  a
-    padding-left: 30px
   h2
     color: white
+    padding-bottom: 20px
+  .true
+    +btn($fixed: true)
+    padding-bottom: 15px
+  .false
+    +btn($fixed: false, $empty: true)
+    width: 190px
+    padding-bottom: 15px
+
   
 .card
   // justify-content: space-between
@@ -97,18 +109,18 @@ li
     background-color: #ffffff
     border: 1px solid #d7dbe8
   figure:hover
+    transition: all 1s ease
     border-radius: 30px
     filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
     background-color: #ffffff
   figcaption
     align-items: center
   img
-    // justify-content: center
-    // padding-left: 127px
     padding-top: 20px
   a
     text-align: center
     // padding-bottom: 20px
+    // +btn($fixed: false)
 .personal
   font-size: 14px
   letter-spacing: 1px
@@ -125,8 +137,8 @@ li
     font-weight: 500
     text-align: center
 .description
-  font-size: 16px
-  line-height: 28px
+  font-size: 14 px
+  line-height: 25px
   color: #9fa4af
   font-weight: 400
   text-align: center
@@ -144,3 +156,13 @@ footer
     font-weight: 500
     text-align: left
     padding-left: 20px
+  .svg
+    opacity: 0.502
+    font-size: 16px
+    line-height: 19px
+    color: #6a6a77
+    font-family: "Font Awesome"
+    text-align: right
+    padding-top: 18px
+    svg
+      padding-left: 10px

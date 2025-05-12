@@ -9,3 +9,37 @@
     font-weight: 500
     text-align: center
 
+=btn($fixed: true, $empty: false)
+    display: inline-block
+    border-radius: 25px
+    font-size: 12px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: 700
+    padding-top: 15px
+    text-align: center
+    @if $fixed 
+        width: 190px        
+        color: #c2c9db
+        // filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5)) 
+        box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
+        background-color: #ffffff
+        border: 1px solid #d7dbe8
+        :hover
+            background-color: #6e45e2
+            color: #ffffff
+            border-color: #6e45e2
+    @else
+        width: 150px
+        background-color: rgba(110,69,226,0)
+        border: 1px solid #ffffff
+        :hover
+            background-color: #ffffff
+            color: #6e45e2
+    @if $empty  != false
+        background-color: #6e45e2
+        border: 1px solid #d7dbe8
+        :hover
+            background-color: #d7dbe8
+            border: 1px solid #6e45e2
