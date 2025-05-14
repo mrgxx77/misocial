@@ -44,6 +44,11 @@ li
     font-size: 16px
     line-height: 19px
     font-weight: 500
+  .logo
+    align-items: center
+    span
+      padding-left: 10px
+      padding-top: -10px
   span 
     font-size: 30px
     letter-spacing: 6px
@@ -51,29 +56,93 @@ li
     font-weight: 700
     align-items: center
 
+// .dark-bgc 
+//   display: none
+//   position: fixed
+//   top: 0
+//   left: 0
+//   width: 100%
+//   height: 100%
+//   background-color: rgba(0, 0, 0, 0.3)
+//   backdrop-filter: blur(4px)
+//   z-index: 1
+// .flex 
+//   position: relative
+//   display: flex
+//   justify-content: space-between
+//   align-items: center
+//   // column-gap: 10px
+// .burger 
+//   width: 50px
+//   height: 100%
+//   cursor: pointer
+// .bord 
+//   display: block
+//   margin: 4px
+//   width: 30px
+//   height: 5px
+//   border-radius: 2px
+//   background-color: #fff
+//   transition: all 1s ease
+// .menu 
+//   position: absolute
+//   top: 0
+//   left: -100% 
+//   z-index: 2
+//   transition: all .5s ease
+// .cancel 
+//   position: absolute
+//   top: -10px
+//   right: 5px
+//   cursor: pointer
+// .top-line 
+//   padding: 15px 10px
+// .menu li 
+//   padding: 15px 10px
+
+// @media screen and (min-width: 500px) 
+//   .burger 
+//     display: none
+//   .top-line 
+//     padding: 0 10px
+//   .menu 
+//     position: static
+//     display: flex
+//     justify-content: space-between
+//     column-gap: 10px
+//   .menu li 
+//     padding: 15px 10px
+//   .cancel 
+//     display: none
 
 .light
   a, span
     color: #ffffff
+    transition: all 1s ease  
   .a
     +btn($fixed: false)
   .a:hover
-    transition: all 1s ease  
     background-color: #ffffff
     color: #6e45e2
+  li 
+    a:hover
+      font-size: 20px
 
 .dark 
   a, span
     color: #756edc
+    transition: all 1s ease  
   .a
     +btn($fixed: true)
     padding-bottom: 15px
     width: 150px
   .a:hover
-    transition: all 1s ease  
     +btn($fixed: false, $empty: true)
     // width: 190px
     padding-bottom: 15px
+  li 
+    a:hover
+      font-size: 20px
 
 
 .pricing 
@@ -93,6 +162,13 @@ li
 .plan
   span, p
     color: #9fa4af
+  // .span:before
+  //   content: ""
+  //   width: 24px
+  //   height: 1px
+  //   background-color: #6e45e2
+  //   right: 2px
+  //   top: 2px
 
 .control
   +gradient("../img/Map.png")
@@ -107,6 +183,8 @@ li
   a
     +btn($fixed: true)
     padding-bottom: 15px
+  .gap 
+    margin-right: 20px
   a:hover
     transition: all 1s ease  
     +btn($fixed: false, $empty: true)
@@ -129,6 +207,7 @@ li
     align-items: center
   img
     padding-top: 20px
+    justify-content: center
   a
     text-align: center
     padding-bottom: 15px
@@ -188,5 +267,6 @@ footer
     font-family: "Font Awesome"
     text-align: right
     padding-top: 18px
+    padding-right: 20px
     svg
       padding-left: 10px

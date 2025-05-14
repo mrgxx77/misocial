@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, user-scaleble=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
         title misocial - social marketing and analytics
         link(rel="stylesheet", href="css/styles.css")
         link(rel="preconnect" href="https://fonts.googleapis.com")
@@ -10,9 +10,16 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet")
     body
         include components/mixin
+        //- .dark-bgc
         header
-            +menu(mainMenu)
+            //- .flex.flex.top-line
+            //-     .burger
+            //-         .bord.b3
+            //-         .bord.b3
+            //-         .bord.b3
             .pricing
+                +menu(mainMenu)
+                //- p.cancel x
                 p.span SOCIAL MARKETING and ANALYTICS
                 h1 Pricing Table
                 p Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -31,7 +38,7 @@ html(lang="en")
         .control 
             p.span SOCAL MARKETING and ANALYTICS
             h2 Take control of your data
-            a get started
+            a.gap get started
             a explore features 
         footer
             +menu(mainMenu, 'dark')
