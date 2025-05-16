@@ -24,7 +24,7 @@ mixin menu(mainMenu, colorTheme="light")
 -
     let cardInfo = {
         satelite: {
-            img: "../img/AssetThree.png",
+            img: "img/AssetThree.png",
             href: "#",
             personal: "personal",
             currency: "$",
@@ -41,7 +41,7 @@ mixin menu(mainMenu, colorTheme="light")
             hrefBtn: "#",
         },
         mars: {
-            img: "../img/AssetTwo.png",
+            img: "img/AssetTwo.png",
             href: "#",
             personal: "personal",
             currency: "$",
@@ -58,7 +58,7 @@ mixin menu(mainMenu, colorTheme="light")
             hrefBtn: "#",
         },
         rocket: {
-            img: "../img/AssetOne.png",
+            img: "img/AssetOne.png",
             href: "#",
             personal: "personal",
             currency: "$",
@@ -80,7 +80,8 @@ mixin card(oneCard)
     .card
         figure 
             figcaption 
-                img(src=oneCard.img, alt=oneCard.alt)
+                p
+                    img(src=oneCard.img, alt=oneCard.alt)
                 p.personal #{oneCard.personal}
                 p.price
                     sup.currency #{oneCard.currency}

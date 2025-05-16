@@ -2,34 +2,38 @@
     background: linear-gradient(-60deg, rgba(135, 211, 205, 0.8) 0%, rgba(109, 69, 225, 0.8) 100%), url(#{$url}) center/cover
 
 =h2()
-    font-size: 60px
-    letter-spacing: -2px
-    line-height: 72px
+    font-size: 60rem
+    letter-spacing: -2rem
+    line-height: 72rem
     color: #4f4f6f
     font-weight: 500
     text-align: center
 
 =btn($fixed: true, $empty: false)
     display: inline-block
-    border-radius: 25px
-    font-size: 12px
-    letter-spacing: 1px
+    border-radius: 25rem
+    font-size: 12rem
+    letter-spacing: 1rem
     text-transform: uppercase
     color: #ffffff
     font-weight: 700
-    padding-top: 15px
+    padding-top: 15rem
     text-align: center
     @if $fixed 
-        width: 190px        
+        width: 190rem        
         color: #c2c9db
-        // filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5)) 
-        box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
+        // filter: drop-shadow(0 0 10.5rem rgba(204,204,223,0.5)) 
+        box-shadow: 0 0 10.5rem rgba(204,204,223,0.5)
         background-color: #ffffff
-        border: 1px solid #d7dbe8
+        border: 1rem solid #d7dbe8
     @else
-        width: 150px
+        width: 150rem
         background-color: rgba(110,69,226,0)
-        border: 1px solid #ffffff
+        border: 1rem solid #ffffff
     @if $empty  != false
         background-color: #6e45e2
-        border: 1px solid #d7dbe8
+        border: 1rem solid #d7dbe8
+
+=media($size)
+    @media screen and (min-width: #{$size}px)
+        @content
