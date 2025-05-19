@@ -84,7 +84,7 @@ mixin card(oneCard)
                     img(src=oneCard.img, alt=oneCard.alt)
                 p.personal #{oneCard.personal}
                 p.price
-                    sup.currency #{oneCard.currency}
+                    b.currency #{oneCard.currency}
                     b #{oneCard.price}
                     if isMounth
                         | /mounth
