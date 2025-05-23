@@ -15,6 +15,11 @@ h2
   +h2
   margin: 0
 
+.span
+  justify-content: center
+  align-items: center
+  text-align: center
+
 p
   font-size: 16rem
   font-weight: 400
@@ -52,10 +57,11 @@ li
     font-weight: 500
     transition: all 1s ease  
   .logo
-    display: block
-    align-items: center
+    a
+      display: flex
+      align-items: center
     span
-      padding-left: 10rem
+      padding-left: 15rem
   span 
     font-size: 30rem
     letter-spacing: 6rem
@@ -147,13 +153,16 @@ li
     background-color: #ffffff
     color: #6e45e2
   li
-    a:hover:before
+    a:before
       transition: all 1s ease
       @extend %toolbelt
       width: 100%
       top: 22px
       height: 2px
       background-color: #ffffff
+      transform: scaleX(0)
+    a:hover:before
+      transform: scaleX(1)
 
 .dark 
   a, span
@@ -168,15 +177,21 @@ li
     border: 1rem solid #6e45e2
     padding-bottom: 15rem
   li 
+    a
+      transform: scale(1)
     a:hover
-      font-size: 20rem
       color: #756edc
+      transform: scale(2)
+
+%span
+  width: 24px
+  height: 1px
+  background-color: #6e45e2
 
 .pricing 
   h1
     font-size: 86rem
     letter-spacing: -3rem
-    line-height: 72px
     color: #ffffff
     font-weight: 500
     text-align: center
@@ -184,18 +199,28 @@ li
     color: #ffffff
     margin-bottom: 0px
   svg
-    padding-top: 50px
+    padding-top: 70px
+    padding-bottom: 20px
+    transition: all 1s ease
+  svg:hover
+    filter: drop-shadow(0 0 10rem rgba(255,255,255,0.71))
   span
     color: #ffffff
     text-align: center
   .span
-    padding-top: 50px
+    position: relative
+    padding-top: 70px
+  .span:before
+    left: -30px
+    bottom: 7px
+    +placeholder
+    background-color: #ffffff
+  .span:after
+    right: -30px
+    bottom: 7px
+    background-color: #ffffff
+    +placeholder
 
-%span
-  top: 15px
-  width: 24px
-  height: 1px
-  background-color: #6e45e2
 
 .plan
   padding-top: 30px
@@ -204,12 +229,13 @@ li
   .span
     position: relative
   .span:before
-    // margin-right: 10px
-    @extend %toolbelt
-    @extend %span
+    left: -30px
+    top: 10px
+    +placeholder
   .span:after
-    @extend %toolbelt
-    @extend %span
+    right: -30px
+    top: 10px
+    +placeholder
 
 .control
   padding-top: 40px
@@ -241,19 +267,19 @@ li
   +media(1150)
     // width: 440px 
     display: flex
-    justify-content: space-between
+    justify-content: center
 .card
   max-width: 400px
   justify-content: center
-  +media(1150)
+  +media(1050)
     width: 400px
   padding-bottom: 20px
   figure
     border-radius: 30rem
     background-color: #ffffff
     border: 1rem solid #d7dbe8
-  figure:hover
     transition: all 1s ease
+  figure:hover
     border-radius: 30rem
     filter: drop-shadow(0 0 46rem rgba(204,204,223,0.71))
     background-color: #ffffff
@@ -329,6 +355,9 @@ footer
     padding-top: 18rem
     padding-right: 80rem
     max-width: 40px
+    .google
+      // width: 20px
+      height: 20px
     svg
       padding-left: 10rem
       cursor: pointer
