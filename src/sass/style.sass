@@ -5,7 +5,11 @@ body
   margin: 0
 
 html
-  font-size: 1px 
+  font-size: 0.7px 
+  +media(1010)
+    font-size: 1px 
+  +media(2040)
+    font-size: 2px 
 
 h2
   +h2
@@ -13,13 +17,13 @@ h2
 
 p
   font-size: 16rem
-  line-height: 28px  
   font-weight: 400
   text-align: center
 
 a, li
   list-style: none
   text-decoration: none
+  transition: all 1s ease
 
 header
   +gradient("../img/Background.jpg")
@@ -40,18 +44,18 @@ li
   display: flex
   justify-content: space-between
 
-
 .navigation
   padding: 20rem
   a
     font-size: 16rem
     line-height: 19px
     font-weight: 500
+    transition: all 1s ease  
   .logo
+    display: block
     align-items: center
     span
       padding-left: 10rem
-      padding-top: -10rem
   span 
     font-size: 30rem
     letter-spacing: 6rem
@@ -63,7 +67,10 @@ li
   ul
     padding-right: 30px
     li
+      transition: all 1s ease  
       padding-left: 15px
+      
+
 
 // .dark-bgc 
 //   display: none
@@ -124,29 +131,32 @@ li
 //   .cancel 
 //     display: none
 
+%toolbelt
+  position: absolute
+  content: ""
+  
 .light
   a, span
     color: #ffffff
-    transition: all 1s ease  
+    transition: all 1s ease
+    position: relative
   .a
     +btn($fixed: false)
     padding-bottom: 15px
   .a:hover
     background-color: #ffffff
     color: #6e45e2
-  li 
-    a:hover
-      a:before
-        content: ""
-        height: 1rem
-        width: 20rem
-        top: 20rem
-        left: 5rem
-        color: #ffffff
+  li
+    a:hover:before
+      transition: all 1s ease
+      @extend %toolbelt
+      width: 100%
+      top: 22px
+      height: 2px
+      background-color: #ffffff
 
 .dark 
   a, span
-    transition: all 1s ease  
     color: #37374a
   .a
     +btn($fixed: false, $empty: true)
@@ -172,6 +182,7 @@ li
     text-align: center
   p
     color: #ffffff
+    margin-bottom: 0px
   svg
     padding-top: 50px
   span
@@ -180,17 +191,25 @@ li
   .span
     padding-top: 50px
 
+%span
+  top: 15px
+  width: 24px
+  height: 1px
+  background-color: #6e45e2
+
 .plan
   padding-top: 30px
   span, p
     color: #9fa4af
-  // .span:before
-  //   content: ""
-  //   width: 24rem
-  //   height: 1rem
-  //   background-color: #6e45e2
-  //   right: 2rem
-  //   top: 2rem
+  .span
+    position: relative
+  .span:before
+    // margin-right: 10px
+    @extend %toolbelt
+    @extend %span
+  .span:after
+    @extend %toolbelt
+    @extend %span
 
 .control
   padding-top: 40px
@@ -217,11 +236,16 @@ li
 
 .cards
   justify-content: center
-  padding-bottom: 50px
+  padding-bottom: 30px
   padding-top: 30px 
+  +media(1150)
+    // width: 440px 
+    display: flex
+    justify-content: space-between
 .card
-  display: block
-  flex-wrap: wrap
+  justify-content: center
+  max-width: 440px
+  padding-bottom: 20px
   figure
     border-radius: 30rem
     background-color: #ffffff
@@ -242,7 +266,6 @@ li
     padding-bottom: 15rem
     +btn($fixed: true)
     // align-items: center
-    margin-left: 70rem
     margin-bottom: 40rem
   a:hover
     transition: all 1s ease  
@@ -272,6 +295,7 @@ li
   color: #9fa4af
   font-weight: 400
   text-align: center
+  padding-left: 0
 .currency
   position: absolute
   font-size: 16px 
@@ -299,13 +323,17 @@ footer
     font-size: 16rem
     line-height: 19px
     color: #6a6a77
-    font-family: "Font Awesome"
     text-align: right
     padding-top: 18rem
     padding-right: 20rem
+    max-width: 40px
     svg
       padding-left: 10rem
       cursor: pointer
     svg:hover
       transition: all 1s ease
       fill: #6e45e2
+  .social-networks
+    +media(500)
+      display: flex
+      justify-content: space-between
