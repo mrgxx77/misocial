@@ -84,12 +84,12 @@ mixin card(oneCard)
                     img(src=oneCard.img, alt=oneCard.alt)
                 p.personal #{oneCard.personal}
                 p.price
-                    b.currency #{oneCard.currency}
+                    p.currency #{oneCard.currency}
                     b #{oneCard.price}
-                    if isMounth
-                        | /mounth
-                    else 
-                        | /year
+                        if isMounth
+                            | /mounth
+                        else 
+                            | /year
                 ul.description
                     for item in oneCard.description 
                         li #{item}
