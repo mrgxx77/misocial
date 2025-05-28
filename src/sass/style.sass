@@ -44,7 +44,6 @@ li
   text-transform: uppercase
   font-weight: 700
 
-
 .flex-between
   display: flex
   justify-content: space-between
@@ -109,7 +108,7 @@ li
 .menu 
   position: absolute
   top: 0
-  left: -100%   
+  left: 100%   
   z-index: 2
   transition: all .5s ease
 // .cancel 
@@ -132,6 +131,8 @@ li
     display: flex
     justify-content: space-between
     column-gap: 10rem
+    +media(750)
+      display: block
   .menu li 
     padding: 15rem 10rem
   // .cancel 
@@ -261,10 +262,11 @@ li
     padding-bottom: 15rem
 
 .cards
-  justify-content: center
   padding-bottom: 30rem
   padding-top: 30rem 
-  display: flex
+  +media(880)
+    justify-content: center
+    display: flex
 .card
   width: 440rem
   justify-content: center
