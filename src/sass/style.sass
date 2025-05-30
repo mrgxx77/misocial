@@ -97,13 +97,15 @@ li
   width: 50rem
   height: 100%
   cursor: pointer
+  padding-top: 28px
+  padding-right: 15px
 .bord 
   display: block
   margin: 4rem
   width: 30rem
   height: 5rem
   border-radius: 2rem
-  background-color: #fff
+  background-color: #ffffff
   transition: all 1s ease
 .menu 
   position: absolute
@@ -141,6 +143,12 @@ li
 %toolbelt
   position: absolute
   content: ""
+
+.mb
+  display: flex
+  justify-content: space-between
+  +media(750)
+    display: block
   
 .light
   a, span
@@ -272,8 +280,10 @@ li
   width: 440rem
   justify-content: center
   padding-bottom: 20rem
-  // display: block
+  display: block
   // justify-content: center
+  +media(880)
+    display: flex
   figure
     border-radius: 30rem
     background-color: #ffffff
@@ -314,13 +324,13 @@ li
   padding-right: 10rem
 .price
   b
+    position: relative
     font-size: 60rem
     letter-spacing: -2rem
     // line-height: 72rem
     color: #4f4f6f
     font-weight: 500
     text-align: center
-    position: relative
 .description
   font-size: 14rem
   line-height: 25rem
@@ -378,3 +388,7 @@ footer
       text-align: center
       +media(500)
         text-align: left
+  .mb
+    .burger
+      .bord
+        background-color: #37374a
