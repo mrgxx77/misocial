@@ -78,11 +78,9 @@ li
   .menu
     align-items: center
   ul
+    column-gap: 20px
     li
-      transition: all 1s ease  
-      padding-left: 15rem
-      
-
+      transition: all 1s ease        
 
 .dark-bgc 
   display: none
@@ -347,6 +345,7 @@ li
     // line-height: 72rem
     color: #4f4f6f
     font-weight: 500
+    position: relative
     text-align: center
 .description
   font-size: 14rem
@@ -359,9 +358,11 @@ li
 .currency
   position: absolute
   font-size: 16rem 
-  left: 35%
-  +media(880)
-    left: 25%
+  left: -10rem
+  top: 5rem
+  // left: 35%
+  // +media(880)
+  //   left: 25%
 footer
   padding-top: 20rem
   hr
