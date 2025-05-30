@@ -1,5 +1,13 @@
 @import components/mixine
 
+*
+  margin: 0
+  padding: 0
+
+.wrapper
+  margin: 0 auto
+  max-width: 1450px
+
 body
   font-family: "Maven Pro", sans-serif
   margin: 0
@@ -49,7 +57,7 @@ li
   justify-content: space-between
 
 .navigation
-  padding: 20rem
+  padding-top: 20rem
   a
     font-size: 16rem
     line-height: 19rem
@@ -70,7 +78,6 @@ li
   .menu
     align-items: center
   ul
-    padding-right: 30rem
     li
       transition: all 1s ease  
       padding-left: 15rem
@@ -198,7 +205,10 @@ li
   background-color: #6e45e2
 
 .pricing 
+  .analytics
+    padding-top: 70px
   h1
+    padding: 30px 0
     font-size: 86rem
     letter-spacing: -3rem
     color: #ffffff
@@ -232,7 +242,7 @@ li
 
 
 .plan
-  padding-top: 30rem
+  padding-top: 60rem
   span, p
     color: #9fa4af
   .span
@@ -245,6 +255,9 @@ li
     right: -30rem
     top: 50%
     +placeholder
+  h2
+    padding-top: 20px
+    padding-bottom: 30px
 
 .control
   padding-top: 40rem
@@ -273,18 +286,20 @@ li
   justify-content: center
   padding-bottom: 30rem
   padding-top: 30rem 
+  column-gap: 55rem
   +media(880)
     justify-content: center
     display: flex
 .card
-  width: 440rem
+  max-width: 370rem
+  // margin-right: 55rem
   justify-content: center
   padding-bottom: 20rem
+  padding-top: 50rem
   display: block
-  // justify-content: center
-  +media(880)
-    display: flex
+  justify-content: center
   figure
+    padding: 0px 20px
     border-radius: 30rem
     background-color: #ffffff
     border: 1rem solid #d7dbe8
@@ -309,6 +324,7 @@ li
     +btn($fixed: true)
     // align-items: center
     margin-bottom: 20rem
+    margin-top: 30rem
   a:hover
     transition: all 1s ease  
     +btn($fixed: false, $empty: true)
@@ -323,8 +339,9 @@ li
   font-weight: 700
   padding-right: 10rem
 .price
+  padding-top: 10rem
+  position: relative
   b
-    position: relative
     font-size: 60rem
     letter-spacing: -2rem
     // line-height: 72rem
@@ -338,13 +355,17 @@ li
   font-weight: 400
   text-align: center
   padding-left: 0
+  padding-top: 20px
 .currency
   position: absolute
   font-size: 16rem 
+  left: 35%
+  +media(880)
+    left: 25%
 footer
   padding-top: 20rem
   hr
-    margin: 20rem
+    margin: 20rem 0
     opacity: 0.200
     background-color: #bdbdc2
   p
@@ -354,7 +375,7 @@ footer
     color: #6a6a77
     font-weight: 500
     text-align: left
-    padding-left: 20rem
+    // padding-left: 20rem
   p:hover
     transition: all 1s ease
     // font-size: 16rem
@@ -367,7 +388,7 @@ footer
     text-align: right
     padding-top: 5rem
     max-width: 40rem
-    padding-right: 100rem
+    padding-right: 60rem
     p
       text-align: center
     .google
