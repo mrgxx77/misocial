@@ -1,61 +1,48 @@
 @import components/mixine
-
 *
   margin: 0
   padding: 0
-
 .wrapper
   margin: 0 auto
   max-width: 95%
-
 body
   font-family: "Maven Pro", sans-serif
   margin: 0
-
 html
   font-size: 0.7px
   +media(1010)
     font-size: 1px
   +media(2040)
     font-size: 2px
-
 h2
   +h2
   margin: 0
-
 .span
   justify-content: center
   align-items: center
   text-align: center
-
 p
   font-size: 16rem
   font-weight: 400
   text-align: center
-
 a, li
   list-style: none
   text-decoration: none
   transition: all 1s ease
-
 header
   +gradient("../img/Background.jpg")
   min-height: 500rem
-
 li
   padding-right: 20rem
-
 .span
   font-size: 14rem
   letter-spacing: 1rem
   line-height: 32rem
   text-transform: uppercase
   font-weight: 700
-
 .flex-between
   display: flex
   justify-content: space-between
-
 .navigation
   padding-top: 20rem
   a
@@ -81,7 +68,6 @@ li
     column-gap: 20px
     li
       transition: all 1s ease        
-
 .dark-bgc 
   display: none
   position: fixed
@@ -127,7 +113,6 @@ li
   padding: 15rem 10rem
 .menu li 
   padding: 15rem 10rem
-
 +media(750) 
   .burger 
     display: none
@@ -144,17 +129,14 @@ li
     padding: 15rem 10rem
   // .cancel 
   //   display: none
-
 %toolbelt
   position: absolute
   content: ""
-
 .mb
   display: flex
   justify-content: space-between
   +media(750)
     display: block
-  
 .light
   a, span
     color: #ffffff
@@ -177,7 +159,6 @@ li
       transform: scaleX(0)
     a:hover:before
       transform: scaleX(1)
-
 .dark 
   a, span
     color: #37374a
@@ -196,12 +177,10 @@ li
     a:hover
       color: #756edc
       transform: scale(2)
-
 %span
   width: 24rem
   height: 1rem
   background-color: #6e45e2
-
 .pricing 
   .analytics
     padding-top: 70px
@@ -237,8 +216,6 @@ li
     bottom: 7rem
     background-color: #ffffff
     +placeholder
-
-
 .plan
   padding-top: 60rem
   span, p
@@ -256,7 +233,6 @@ li
   h2
     padding-top: 20px
     padding-bottom: 30px
-
 .control
   padding-top: 40rem
   padding-bottom: 50rem
@@ -272,31 +248,29 @@ li
   a
     +btn($fixed: true)
     padding-bottom: 15rem
+    // column-gap: 20rem
   .gap 
-    margin-right: 20rem
+    flex-wrap: wrap
+    +media(298)
+      margin-right: 20rem
   a:hover
     transition: all 1s ease  
     +btn($fixed: false, $empty: true)
     width: 190rem
     padding-bottom: 15rem
-
 .cards
   justify-content: center
   padding-bottom: 30rem
   padding-top: 30rem 
   column-gap: 55rem
-  +media(880)
-    justify-content: center
-    display: flex
+  display: flex
+  flex-wrap: wrap
 .card
-  max-width: 370rem
-  // margin-right: 55rem
-  justify-content: center
-  padding-bottom: 20rem
   padding-top: 50rem
   display: block
   justify-content: center
   figure
+    max-width: 340rem
     padding: 0px 20px
     border-radius: 30rem
     background-color: #ffffff
@@ -311,18 +285,21 @@ li
       height: 510rem
     align-items: center
   img
-    padding-top: 20rem
+    padding-top: 40rem
     justify-content: center
     padding-right: 10rem
     max-width: 130rem
     width: 100%
+    +media(880)
+      padding-top: 20rem
   a
     text-align: center
     padding-bottom: 15rem
     +btn($fixed: true)
-    // align-items: center
-    margin-bottom: 20rem
+    margin-bottom: 40rem
     margin-top: 30rem
+    +media(880)
+      margin-bottom: 20rem
   a:hover
     transition: all 1s ease  
     +btn($fixed: false, $empty: true)
@@ -387,14 +364,14 @@ footer
     line-height: 19rem
     color: #6a6a77
     text-align: right
-    padding-top: 5rem
-    max-width: 40rem
-    padding-right: 60rem
+    padding-top: 20rem
+    +media(500)
+      padding-top: 0rem
+    display: block
     p
       text-align: center
-    .google
-      // width: 20rem
-      height: 20rem
+      display: flex
+      justify-content: center
     svg
       padding-left: 10rem
       cursor: pointer
@@ -410,7 +387,3 @@ footer
       text-align: center
       +media(500)
         text-align: left
-  .mb
-    .burger
-      .bord
-        background-color: #37374a
