@@ -15,7 +15,7 @@ mixin menu(mainMenu, colorTheme="light")
                 img(src="img/SymbolMixin.png", alt="")
                 span MISOCIAL    
         nav.nav.menu.flex-between.items-center
-            ul(class=colorTheme).flex-between
+            ul(class=colorTheme)
                 for item in mainMenu
                     li
                         a(href=item[1]) #{item[0]}
