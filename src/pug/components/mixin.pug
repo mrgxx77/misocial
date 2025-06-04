@@ -9,12 +9,12 @@ doctype html
     ]
 
 mixin menu(mainMenu, colorTheme="light")
-    .navigation.flex-between.items-center.gap(class=colorTheme)
+    .navigation.flex-between.gap(class=colorTheme)
         .logo
             a(href="index.html")
                 img(src="img/SymbolMixin.png", alt="")
                 span MISOCIAL    
-        nav.nav.menu.flex-between.items-center
+        nav.nav.menu.flex-between
             ul(class=colorTheme)
                 for item in mainMenu
                     li

@@ -54,7 +54,7 @@ li
     a
       display: flex
       align-items: center
-    span
+      span
       padding-left: 15rem
   span 
     font-size: 30rem
@@ -71,6 +71,7 @@ li
 .dark-bgc 
   display: none
   position: fixed
+  z-index: 2
   top: 0
   left: 0
   width: 100%
@@ -93,8 +94,9 @@ li
   transition: all 1s ease
 .menu 
   position: absolute
+  position: fixed
   top: 0
-  left: 100%   
+  left: -100%
   z-index: 2
   transition: all .5s ease
   background-color: #6e45e2
